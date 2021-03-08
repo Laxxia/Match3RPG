@@ -1,27 +1,21 @@
 
 Immediate to-do
-- make the shop actually sell things?
-- add base level progression and an equipable item
+- add base level progression to the gear and get item's to actually be equipable
 - make an hp potion that you can buy.
-- make the spell level up? 
-- brain storm how spell progression works. 
 - a spell that effects the board
 
 long term todo
-- bug enemy doesn't spawn
 - add what the bad does - potentially nothing until added.
 - different enemies have different abilities
 - work on the animations for the -- Should be easy enough to do, most of its done its just hooking it in 
 	-player, 
 	-enemy
 - UI elements. 
-- add the charge action for the magic attack -- though this may change depending on austin
 - combos
-- experience and leveling up
+- experience and leveling up for gear
 - enemy variation (perhaps an enemy that might heal?)
 
 
 later later ideas
 - shields as equipment - offensive shields.
 - while you have shields potentially heal. 
-- Potentially make some of the gems match add ot a meta spell crafting skill

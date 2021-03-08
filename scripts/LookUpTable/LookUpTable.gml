@@ -44,3 +44,39 @@ function scrInventoryAdd(itemData){
 		}
 	}
 }
+
+global.playerGear = {
+	helmet:			-1,
+	chest:			-1,
+	gloves:			-1,
+	boots:			-1,
+	legs:			-1,
+	weapon:			-1,
+	shield:			-1,
+	amuletOne:		-1,
+	amuletTwo:		-1,
+	amuletThree:	-1,
+	amuletFour:		-1
+}
+
+function scrEquip(equipItem, xx, yy){
+	var pg = global.playerGear;
+	switch(equipItem.itemType){
+		case equipmentTypes.head:
+			if(isFilled(pg.helmet)){
+				 oPlayerInventory.ds_inventory[# yy, xx] = pg.helmet;
+			}
+			pg.helmet = equipItem;
+		break;
+		case equipmentTypes.weapon:
+			pg.weapon = equipItem;
+		break;
+	}
+}
+
+function isFilled(slot){
+	if(slot == -1){
+		return false;
+	} else {return true;}
+	
+}
