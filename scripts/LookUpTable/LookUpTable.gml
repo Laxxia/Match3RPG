@@ -6,10 +6,20 @@ global.lookUpTable = {
 		function(){oPlayer.attackDamage -= 5;},
 		5, 3,setType.iron, sprSword),
 		
+		CopperSword: new Equipment(equipmentTypes.weapon, "Copper Sword", "It's an Iron Sword", 
+		function(){oPlayer.attackDamage  += 5;},
+		function(){oPlayer.attackDamage -= 5;},
+		5, 3,setType.iron, sprCSword),
+		
 		IronHelm: new Equipment(equipmentTypes.head, "Iron Helm", "It's an Iron Helm", 
 		function(){oPlayer.defense += 5;},
 		function(){oPlayer.defense -= 5;},
-		5, 3,setType.iron, sprHelm)
+		5, 3,setType.iron, sprHelm),
+		
+		CopperHelm: new Equipment(equipmentTypes.head, "Copper Helm", "It's an Iron Helm", 
+		function(){oPlayer.defense += 5;},
+		function(){oPlayer.defense -= 5;},
+		5, 3,setType.iron, sprCHelm)
 }
 
 function Equipment (itemType,itemName,description,onEquip,onDequip,cost,maxLevel,set, sprite) constructor{
@@ -61,14 +71,17 @@ global.playerGear = {
 
 function scrEquip(equipItem, xx, yy){
 	var pg = global.playerGear;
-	switch(equipItem.itemType){
+	switch(equipItem.lookUp.itemType){
 		case equipmentTypes.head:
 			if(isFilled(pg.helmet)){
 				 oPlayerInventory.ds_inventory[# yy, xx] = pg.helmet;
-			}
+			} else {oPlayerInventory.ds_inventory[# yy, xx] = -1;}
 			pg.helmet = equipItem;
 		break;
 		case equipmentTypes.weapon:
+			if(isFilled(pg.weapon)){
+				 oPlayerInventory.ds_inventory[# yy, xx] = pg.weapon;
+			} else {oPlayerInventory.ds_inventory[# yy, xx] = -1;}
 			pg.weapon = equipItem;
 		break;
 	}

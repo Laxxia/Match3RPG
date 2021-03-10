@@ -54,18 +54,17 @@ if(pickup_slot != -1){
 			inv_grid[# py, px] = hold;
 			pickup_slot = -1;
 		}
-	} 
-	if(mouse_check_button_pressed(mb_right)){
-		//check to see it's equipable
-		scrEquip(inv_grid[# m_sloty, m_slotx], m_slotx, m_sloty);
-		//Equiping the gear
 	}
-
 } else if(ss_item != -1){
 	if(mouse_check_button_pressed(mb_left)){
 		pickup_slot = inv_grid[# m_sloty, m_slotx];
 		pickup_sslot = selected_slot;
 		px = m_slotx;
 		py = m_sloty;
+	}
+	if(mouse_check_button_pressed(mb_right)){
+		//check to see it's equipable
+		scrEquip(inv_grid[# m_sloty, m_slotx], m_slotx, m_sloty);
+		//Equiping the gear
 	}
 }

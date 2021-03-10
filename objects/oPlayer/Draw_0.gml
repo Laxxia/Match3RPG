@@ -7,6 +7,9 @@ draw_text(x, y + 300, "mana: " + string(global.characterData.curMana));
 draw_text(x, y + 400, "Gold: " + string(global.characterData.gold));
 
 if(isFilled(global.playerGear.helmet)){
-	draw_text(x + 400, y + 100, "Helmet: " + string(global.playerGear.helmet.itemName));
+	draw_text(x + 800, y + 100, "Helmet: " + string(global.playerGear.helmet.lookUp.itemName));
+}
+if(isFilled(global.playerGear.weapon)){
+	draw_text(x + 800, y + 200, "Weapon: " + string(global.playerGear.weapon.lookUp.itemName));
 }
 draw_self();
