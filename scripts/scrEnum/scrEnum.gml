@@ -26,14 +26,6 @@ function scrEnum(){
 		FlameAmulet
 	} */
 	
-	enum equipmentTypes{
-		head,
-		chest,
-		weapon,
-		shield,
-		amulet
-	}
-	
 	enum setType{
 		iron
 	}

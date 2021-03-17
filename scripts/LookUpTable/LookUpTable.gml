@@ -55,41 +55,64 @@ function scrInventoryAdd(itemData){
 	}
 }
 
-global.playerGear = {
-	helmet:			-1,
-	chest:			-1,
-	gloves:			-1,
-	boots:			-1,
-	legs:			-1,
-	weapon:			-1,
-	shield:			-1,
-	amuletOne:		-1,
-	amuletTwo:		-1,
-	amuletThree:	-1,
-	amuletFour:		-1
+function PlayerGearHolder(_body, _item/*, _x, _y */) constructor {
+   bodyType = _body;
+   item = _item;
+   //inventory_x = _x;
+   //inventory_y = _y;
+}
+
+function Gear(_helmet, _chest, _gloves, _boots, _legs, _weapon, _shield, _amuletOne, _amuletTwo) constructor {
+  helmet = _helmet;
+  chest = _chest;
+  gloves = _gloves;
+  boots = _boots;
+  legs = _legs;
+  weapon = _weapon;
+  shield = _shield;
+  amuletOne = _amuletOne;
+  amuletTwo = _amuletTwo;
+  allItems = [helmet, chest, gloves, boots, legs, weapon, shield, amuletOne, amuletTwo];
+}
+
+global.playerGear = new Gear(
+    new PlayerGearHolder(equipmentTypes.head, -1),
+    new PlayerGearHolder(equipmentTypes.chest, -1),
+    new PlayerGearHolder(equipmentTypes.gloves, -1),
+    new PlayerGearHolder(equipmentTypes.boots, -1),
+    new PlayerGearHolder(equipmentTypes.legs, -1),
+    new PlayerGearHolder(equipmentTypes.weapon, -1),
+    new PlayerGearHolder(equipmentTypes.shield, -1),
+    new PlayerGearHolder(equipmentTypes.amulet, -1),
+    new PlayerGearHolder(equipmentTypes.amulet, -1)
+);
+
+enum equipmentTypes{
+	head,
+	chest,
+	gloves,
+	boots,
+	legs,
+	weapon,
+	shield,
+	amulet
 }
 
 function scrEquip(equipItem, xx, yy){
 	var pg = global.playerGear;
-	switch(equipItem.lookUp.itemType){
-		case equipmentTypes.head:
-			if(isFilled(pg.helmet)){
-				 oPlayerInventory.ds_inventory[# yy, xx] = pg.helmet;
-			} else {oPlayerInventory.ds_inventory[# yy, xx] = -1;}
-			pg.helmet = equipItem;
-		break;
-		case equipmentTypes.weapon:
-			if(isFilled(pg.weapon)){
-				 oPlayerInventory.ds_inventory[# yy, xx] = pg.weapon;
-			} else {oPlayerInventory.ds_inventory[# yy, xx] = -1;}
-			pg.weapon = equipItem;
-		break;
+	for(var i = 0; i < array_length(pg.allItems); i++){
+		var item = pg.allItems[i];
+		if(item.bodyType == equipItem.lookUp.itemType){
+			isFilled(item.item, xx, yy);
+			item.item = equipItem;
+			break;
+		}
 	}
 }
 
-function isFilled(slot){
+function isFilled(slot, xx, yy){
 	if(slot == -1){
-		return false;
-	} else {return true;}
+		oPlayerInventory.ds_inventory[# yy, xx] = -1;
+	} else {oPlayerInventory.ds_inventory[# yy, xx] = slot;}
 	
 }
