@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprShopFiller",
-    "path": "sprites/sprShopFiller/sprShopFiller.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -4,6 +4,7 @@
     {"id":{"name":"parallax_demon_woods_mid_trees","path":"sprites/parallax_demon_woods_mid_trees/parallax_demon_woods_mid_trees.yy",},"order":15,},
     {"id":{"name":"sprEnemy","path":"sprites/sprEnemy/sprEnemy.yy",},"order":12,},
     {"id":{"name":"sprite1","path":"sprites/sprite1/sprite1.yy",},"order":1,},
+    {"id":{"name":"sprShopFiller","path":"sprites/sprShopFiller/sprShopFiller.yy",},"order":15,},
     {"id":{"name":"sprHelm","path":"sprites/sprHelm/sprHelm.yy",},"order":3,},
     {"id":{"name":"scrCharacterInstantiate","path":"scripts/scrCharacterInstantiate/scrCharacterInstantiate.yy",},"order":17,},
     {"id":{"name":"oButton","path":"objects/oButton/oButton.yy",},"order":20,},
@@ -135,7 +136,7 @@
     "IDEVersion": "2.3.1.542",
   },
   "resourceVersion": "1.4",
-  "name": "Match3RPG",
+  "name": "Match_3_engine_hunie_pop_like_G23_12",
   "tags": [],
   "resourceType": "GMProject",
 }
