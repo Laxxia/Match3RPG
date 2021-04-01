@@ -19,3 +19,34 @@ long term todo
 later later ideas
 - shields as equipment - offensive shields.
 - while you have shields potentially heal. 
+
+
+
+thoughts on gear: What a playable level looks like?
+Currently im not sure how two things should occur: Sources of gear
+and sources of gear progression.
+
+How to get gear is kinda weird, like having it drop from mobs? Having it be sold by the shop? How often are shops?
+Do you split it, being able to craft really good gear, gear drops from mobs and you can snipe purchase from shops?
+
+If you can do lal tehse things then how do duplicates and your inventory work? Combining gear to increase rarity?
+What does the progression of combining for rarity do for the items themselveS?
+
+Weapons and their kinda lack of multitudes right now? --  Potentially add range to increase weapon potential types?
+
+Normal gear progression -- you pool experience and then target what gear you wish to upgrade?
+
+increased tick rate as a buff. 
+
+crafting is queued -- to make a potion is like 15 seconds - uses monster drops. 
+pausing completely covers the board
+
+potentially split potions and elixirs
+
+shop is where you can get gear
+boss's/mini bosses
+normal mobs drop gear. 
+
+
+
+
