@@ -15,16 +15,20 @@ onHoverEnd = function(){
 };
 
 onDrop = function(payload){
-	cachedItem = undefined;
-	containedItem = payload;
-	return true;
-	//should return undefined or an instance of what it used to contain
+    if((dropTags & payload.dragDropTag) == dropTags){
+        var _lastContainedItem = containedItem;
+        containedItem = payload;
+        if(_lastContainedItem != undefined){
+            return _lastContainedItem;
+        }
+        return true;
+    }
+    return undefined;
 };
 
 startDrag = function(){
 	cachedItem = containedItem;
 	containedItem = undefined;
-	//if cool bitmasked hting returns false return swap else return cached item
 	return cachedItem;
 
 };

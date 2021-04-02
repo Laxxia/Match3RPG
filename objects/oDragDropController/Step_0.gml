@@ -10,46 +10,69 @@ with(oUICellSlot){
 //debug gimme item
 if(keyboard_check(vk_space)){
 	if(mouse_check_button(mb_left)){
-		currentPayload = new dragDropPayload(sprUiHealthPotion, dragDropTags.EquippedGear);
+		currentPayload = new dragDropPayload(sprUiManaPotion, dragDropTags.EquipmentInventory);
+		isDragging = true;
 	}
 }
 
 if(keyboard_check(vk_shift)){
 	if(mouse_check_button(mb_left)){
 		currentPayload = new dragDropPayload(sprUiHealthPotion, dragDropTags.EquipmentInventory);
+		isDragging = true;
 	}
 }
 
 
 
 if(currentPayload){
-	if(!mouse_check_button(mb_left)){
-		if(hoverCell != noone && hoverCell.containedItem == undefined){
-			
+var shouldPerformDrop = isDragging ? !mouse_check_button(mb_left) : mouse_check_button_pressed(mb_left);
+	if(shouldPerformDrop){
+		if(hoverCell != noone /*&& hoverCell.containedItem == undefined*/){
 			//if((hoverCell.dropTags & currentPayload.dragDropTag) == hoverCell.dropTags){
-			if(dragCell != noone){
-				dragCell.onDragSuccess(currentPayload);
+				//Bind to cell
+			var _swapItemOrTrue = hoverCell.onDrop(currentPayload);
+			if(_swapItemOrTrue == true){
+				// successful! hover cell now owns payload. Clear OPERATION of ownership
+				//Edge case here where the dragCell's Cache won't clear
+				if(dragCell != noone){
+					dragCell.onDragSuccess();
+					dragCell = noone;
+				}
+				currentPayload = undefined;
+			}else if(_swapItemOrTrue != undefined){
+				// must be a struct, so we probably got an item back. assign it to drag cell and release ownership
+				//There's an edge case here, where we don't have a drag cell. 
+				dragCell.onDrop(_swapItemOrTrue);
+				dragCell.onDragSuccess();
 				dragCell = noone;
+				currentPayload = undefined;
+			}else{
+				// failed! tell drag cell that its drag canceled and clear OPERATION of ownership
+				if(dragCell != noone){
+					dragCell.onDragCancel();
+					dragCell = noone;
+					currentPayload = undefined;
+				}
+				isDragging = false;
 			}
-			//Bind to cell
-			hoverCell.onDrop(currentPayload);
-			currentPayload = undefined;
 			//}
 
 		}else {	
 			//could not find cell, cancel operation
 			if(dragCell != noone){
-				dragCell.onDragCancel(currentPayload);
+				dragCell.onDragCancel();
 				dragCell = noone;
 			}
-			currentPayload = undefined;
 		}
-	} 
+		isDragging = false;
+	}
+
 }else {
 	if(mouse_check_button(mb_left)){
 		if(hoverCell != noone && hoverCell.containedItem != undefined){
 			currentPayload = hoverCell.startDrag();
 			dragCell = hoverCell;
+			isDragging = true;
 		}		
 	}
 }

@@ -27,8 +27,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "InventoryStuff",
+    "path": "folders/Objects/InventoryStuff.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDragDropController",
