@@ -70,7 +70,7 @@
     {"id":{"name":"scrParallaxControl","path":"scripts/scrParallaxControl/scrParallaxControl.yy",},"order":16,},
     {"id":{"name":"parallax_demon_woods_far_trees","path":"sprites/parallax_demon_woods_far_trees/parallax_demon_woods_far_trees.yy",},"order":14,},
     {"id":{"name":"o_start_button","path":"objects/o_start_button/o_start_button.yy",},"order":10,},
-    {"id":{"name":"oCharacterData","path":"objects/oCharacterData/oCharacterData.yy",},"order":12,},
+    {"id":{"name":"oCharacterData","path":"objects/oCharacterData/oCharacterData.yy",},"order":3,},
     {"id":{"name":"ToDo","path":"notes/ToDo/ToDo.yy",},"order":2,},
     {"id":{"name":"spr_inventory_UI","path":"sprites/spr_inventory_UI/spr_inventory_UI.yy",},"order":22,},
     {"id":{"name":"scrMatchAction","path":"scripts/scrMatchAction/scrMatchAction.yy",},"order":0,},

@@ -9,8 +9,8 @@ hoverCell = noone;
 dragCell = noone;
 isDragging = false;
 
-function dragDropPayload(_sprite_index, _dragDropTag) constructor {
-	sprite = _sprite_index;
+function dragDropPayload(_item, _dragDropTag) constructor {
+	sprite = _item.lookUp.sprite;
 	dragDropTag = _dragDropTag;
 }
 

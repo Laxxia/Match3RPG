@@ -10,14 +10,16 @@ with(oUICellSlot){
 //debug gimme item
 if(keyboard_check(vk_space)){
 	if(mouse_check_button(mb_left)){
-		currentPayload = new dragDropPayload(sprUiManaPotion, dragDropTags.EquipmentInventory);
+		var item = new equipableGear(global.lookUpTable.IronSword);
+		currentPayload = new dragDropPayload(item, dragDropTags.EquipmentInventory);
 		isDragging = true;
 	}
 }
 
 if(keyboard_check(vk_shift)){
 	if(mouse_check_button(mb_left)){
-		currentPayload = new dragDropPayload(sprUiHealthPotion, dragDropTags.EquipmentInventory);
+		var item = new equipableGear(global.lookUpTable.CopperSword);
+		currentPayload = new dragDropPayload(item, dragDropTags.EquipmentInventory);
 		isDragging = true;
 	}
 }
@@ -42,10 +44,12 @@ var shouldPerformDrop = isDragging ? !mouse_check_button(mb_left) : mouse_check_
 			}else if(_swapItemOrTrue != undefined){
 				// must be a struct, so we probably got an item back. assign it to drag cell and release ownership
 				//There's an edge case here, where we don't have a drag cell. 
-				dragCell.onDrop(_swapItemOrTrue);
-				dragCell.onDragSuccess();
-				dragCell = noone;
-				currentPayload = undefined;
+				if(dragCell != noone){
+					dragCell.onDrop(_swapItemOrTrue);
+					dragCell.onDragSuccess();
+					dragCell = noone;
+					currentPayload = undefined;
+				} else {currentPayload = _swapItemOrTrue;}
 			}else{
 				// failed! tell drag cell that its drag canceled and clear OPERATION of ownership
 				if(dragCell != noone){
