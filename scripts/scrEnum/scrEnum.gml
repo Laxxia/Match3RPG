@@ -2,13 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scrEnum(){
 	enum jewelType{
-        attack,
-        magic,
-        heal,
-        bad,
-        gold,
-        charge,
-        mana
+        attack = 0,
+        magic = 1,
+        heal = 2,
+        bad = 3,
+        gold = 4,
+        charge = 5,
+        mana = 6
 	}
 	enum enemies{
 		frog

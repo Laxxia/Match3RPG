@@ -10,7 +10,14 @@ function scr_backup_jewels() {
 	  other.counter++;
 	}
 
-
-
-
 }
+
+function scrChangeJewel(_type, _newType){
+	with(o_jewel){
+		if(gemType = _type){
+			gemType = _newType;
+			image_index = _newType;
+		}
+	}
+}
+
