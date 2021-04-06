@@ -19,6 +19,7 @@
     {"id":{"name":"scrEnum","path":"scripts/scrEnum/scrEnum.yy",},"order":11,},
     {"id":{"name":"s_start","path":"sprites/s_start/s_start.yy",},"order":7,},
     {"id":{"name":"s_dialog_back","path":"sprites/s_dialog_back/s_dialog_back.yy",},"order":8,},
+    {"id":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"order":4,},
     {"id":{"name":"LookUpTable","path":"scripts/LookUpTable/LookUpTable.yy",},"order":18,},
     {"id":{"name":"sprite9","path":"sprites/sprite9/sprite9.yy",},"order":9,},
     {"id":{"name":"background1","path":"sprites/background1/background1.yy",},"order":0,},

@@ -41,3 +41,9 @@ onDragCancel = function(){
 	containedItem = cachedItem;
 	cachedItem = undefined;
 }
+
+onRightClick = function(payload){
+	if(rightClickVerification(payload)){
+		
+	}
+}
