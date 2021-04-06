@@ -45,6 +45,7 @@
     {"id":{"name":"oDragDropController","path":"objects/oDragDropController/oDragDropController.yy",},"order":1,},
     {"id":{"name":"parallax_demon_woods_bg","path":"sprites/parallax_demon_woods_bg/parallax_demon_woods_bg.yy",},"order":16,},
     {"id":{"name":"sprFrogWalk","path":"sprites/sprFrogWalk/sprFrogWalk.yy",},"order":18,},
+    {"id":{"name":"oUICellGearInv","path":"objects/oUICellGearInv/oUICellGearInv.yy",},"order":2,},
     {"id":{"name":"o_dialog_common","path":"objects/o_dialog_common/o_dialog_common.yy",},"order":1,},
     {"id":{"name":"scrEnemyMove","path":"scripts/scrEnemyMove/scrEnemyMove.yy",},"order":2,},
     {"id":{"name":"Sprite18","path":"sprites/Sprite18/Sprite18.yy",},"order":17,},
@@ -69,6 +70,7 @@
     {"id":{"name":"o_resume_button","path":"objects/o_resume_button/o_resume_button.yy",},"order":8,},
     {"id":{"name":"scrParallaxControl","path":"scripts/scrParallaxControl/scrParallaxControl.yy",},"order":16,},
     {"id":{"name":"parallax_demon_woods_far_trees","path":"sprites/parallax_demon_woods_far_trees/parallax_demon_woods_far_trees.yy",},"order":14,},
+    {"id":{"name":"oUICellConsumableInv","path":"objects/oUICellConsumableInv/oUICellConsumableInv.yy",},"order":3,},
     {"id":{"name":"o_start_button","path":"objects/o_start_button/o_start_button.yy",},"order":10,},
     {"id":{"name":"oCharacterData","path":"objects/oCharacterData/oCharacterData.yy",},"order":3,},
     {"id":{"name":"ToDo","path":"notes/ToDo/ToDo.yy",},"order":2,},
@@ -101,10 +103,10 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"menu","path":"rooms/menu/menu.yy",},},
     {"roomId":{"name":"game","path":"rooms/game/game.yy",},},
     {"roomId":{"name":"shop","path":"rooms/shop/shop.yy",},},
-    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

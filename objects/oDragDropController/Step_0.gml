@@ -11,15 +11,15 @@ with(oUICellSlot){
 if(keyboard_check(vk_space)){
 	if(mouse_check_button(mb_left)){
 		var item = new equipableGear(global.lookUpTable.IronSword);
-		currentPayload = new dragDropPayload(item, dragDropTags.EquipmentInventory);
+		currentPayload = item;
 		isDragging = true;
 	}
 }
 
 if(keyboard_check(vk_shift)){
 	if(mouse_check_button(mb_left)){
-		var item = new equipableGear(global.lookUpTable.CopperSword);
-		currentPayload = new dragDropPayload(item, dragDropTags.EquipmentInventory);
+		var item = new equipableGear(global.lookUpTable.HealthPotion);
+		currentPayload = item;
 		isDragging = true;
 	}
 }

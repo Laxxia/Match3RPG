@@ -15,7 +15,7 @@ onHoverEnd = function(){
 };
 
 onDrop = function(payload){
-    if((dropTags & payload.dragDropTag) == dropTags){
+    if(dropVerification(payload)){
         var _lastContainedItem = containedItem;
         containedItem = payload;
         if(_lastContainedItem != undefined){

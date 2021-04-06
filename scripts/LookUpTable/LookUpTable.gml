@@ -1,29 +1,34 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 global.lookUpTable = {
-		IronSword: new Equipment(equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 
+		IronSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 
 		function(){oPlayer.attackDamage  += 5;},
 		function(){oPlayer.attackDamage -= 5;},
 		5, 3,setType.iron, sprSword),
 		
-		CopperSword: new Equipment(equipmentTypes.weapon, "Copper Sword", "It's an Iron Sword", 
+		CopperSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Copper Sword", "It's an Iron Sword", 
 		function(){oPlayer.attackDamage  += 5;},
 		function(){oPlayer.attackDamage -= 5;},
 		5, 3,setType.iron, sprCSword),
 		
-		IronHelm: new Equipment(equipmentTypes.head, "Iron Helm", "It's an Iron Helm", 
+		IronHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Iron Helm", "It's an Iron Helm", 
 		function(){oPlayer.defense += 5;},
 		function(){oPlayer.defense -= 5;},
 		5, 3,setType.iron, sprHelm),
 		
-		CopperHelm: new Equipment(equipmentTypes.head, "Copper Helm", "It's an Iron Helm", 
+		CopperHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Copper Helm", "It's an Iron Helm", 
 		function(){oPlayer.defense += 5;},
 		function(){oPlayer.defense -= 5;},
-		5, 3,setType.iron, sprCHelm)
+		5, 3,setType.iron, sprCHelm),
+		
+		HealthPotion: new  Consumable(itemCat.consumable, "Health Potion", "This is a health potion",
+		function(){oPlayer.curHP += 5;},
+		5, sprUiHealthPotion)
 }
 
-function Equipment (itemType,itemName,description,onEquip,onDequip,cost,maxLevel,set, sprite) constructor{
+function Equipment (itemType,equipmentType,itemName,description,onEquip,onDequip,cost,maxLevel,set, sprite) constructor{
   self.itemType = itemType
+  self.equipmentType = equipmentType
   self.itemName =  itemName
   self.description = description  
   self.onEquip = onEquip
@@ -32,6 +37,15 @@ function Equipment (itemType,itemName,description,onEquip,onDequip,cost,maxLevel
   self.maxLevel = maxLevel
   self.set = set
   self.sprite = sprite //probably group them, so all swords are one sprite, and then have the sprite_index be the specific sword
+}
+
+function Consumable (itemType,itemName,description,onConsume,cost,sprite) constructor{
+  self.itemType = itemType
+  self.itemName =  itemName
+  self.description = description  
+  self.onConsume = onConsume
+  self.cost = cost
+  self.sprite = sprite
 }
 
 
@@ -98,11 +112,17 @@ enum equipmentTypes{
 	amulet
 }
 
+enum itemCat{
+	material,
+	consumable,
+	equipment
+}
+
 function scrEquip(equipItem, xx, yy){
 	var pg = global.playerGear;
 	for(var i = 0; i < array_length(pg.allItems); i++){
 		var item = pg.allItems[i];
-		if(item.bodyType == equipItem.lookUp.itemType){
+		if(item.bodyType == equipItem.lookUp.equipmentType){
 			isFilled(item.item, xx, yy);
 			item.item = equipItem;
 			break;

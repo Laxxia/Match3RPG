@@ -14,19 +14,11 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[
-            {"propertyId":{"name":"dropTags","path":"objects/oUICellSlot/oUICellSlot.yy",},"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"value":"dragDropTags.EquippedGear","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":416.0,"resourceVersion":"1.0","name":"inst_2C76A400","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"dropTags","path":"objects/oUICellSlot/oUICellSlot.yy",},"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"value":"dragDropTags.EquippedGear","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":416.0,"resourceVersion":"1.0","name":"inst_77012830","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oDragDropController","path":"objects/oDragDropController/oDragDropController.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":160.0,"resourceVersion":"1.0","name":"inst_59F5D968","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"dropTags","path":"objects/oUICellSlot/oUICellSlot.yy",},"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"value":"dragDropTags.EquipmentInventory","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1024.0,"y":416.0,"resourceVersion":"1.0","name":"inst_1CD8EA41","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"dropTags","path":"objects/oUICellSlot/oUICellSlot.yy",},"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"value":"dragDropTags.EquipmentInventory","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oUICellSlot","path":"objects/oUICellSlot/oUICellSlot.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":416.0,"resourceVersion":"1.0","name":"inst_30576567","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oUICellGearInv","path":"objects/oUICellGearInv/oUICellGearInv.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":416.0,"resourceVersion":"1.0","name":"inst_9BA11A7","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oUICellGearInv","path":"objects/oUICellGearInv/oUICellGearInv.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":416.0,"resourceVersion":"1.0","name":"inst_333B0F9E","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oUICellConsumableInv","path":"objects/oUICellConsumableInv/oUICellConsumableInv.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1024.0,"y":416.0,"resourceVersion":"1.0","name":"inst_5DEC06D1","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oUICellConsumableInv","path":"objects/oUICellConsumableInv/oUICellConsumableInv.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":416.0,"resourceVersion":"1.0","name":"inst_1B7DF01A","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":null,"colour":4278190080,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
@@ -34,11 +26,11 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_2C76A400","path":"rooms/Test/Test.yy",},
-    {"name":"inst_77012830","path":"rooms/Test/Test.yy",},
     {"name":"inst_59F5D968","path":"rooms/Test/Test.yy",},
-    {"name":"inst_1CD8EA41","path":"rooms/Test/Test.yy",},
-    {"name":"inst_30576567","path":"rooms/Test/Test.yy",},
+    {"name":"inst_9BA11A7","path":"rooms/Test/Test.yy",},
+    {"name":"inst_333B0F9E","path":"rooms/Test/Test.yy",},
+    {"name":"inst_5DEC06D1","path":"rooms/Test/Test.yy",},
+    {"name":"inst_1B7DF01A","path":"rooms/Test/Test.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
