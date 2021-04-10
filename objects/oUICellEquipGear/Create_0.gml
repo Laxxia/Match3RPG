@@ -4,10 +4,14 @@
 // Inherit the parent event
 event_inherited();
 ItemAdded.AddListener(function(){
-//	containedItem.lookUp.onEquip();
+	if(oPlayer != noone){
+		oPlayer.equip(containedItem);
+	}
 });
 ItemRemoved.AddListener(function(){
-//	containedItem.lookUp.onDequip();
+	if(oPlayer != noone){
+		oPlayer.unequip(containedItem);
+	}
 });
 
 Parent_Validate = Validate;

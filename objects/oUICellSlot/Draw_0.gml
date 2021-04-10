@@ -9,4 +9,7 @@ if(containedItem != undefined){
 if(cachedItem != undefined){
 	draw_sprite_ext(cachedItem.lookUp.sprite, 0, x, y, 1, 1, 0, _color, 0.3);
 }
+
+draw_set_font(fntInfo);
 draw_text(x, y, orderIndex); 
+draw_set_font(font0);

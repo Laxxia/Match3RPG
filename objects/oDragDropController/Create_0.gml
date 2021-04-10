@@ -14,10 +14,3 @@ consumablesGroup = noone
 inventoryGroup = new cellGroup(oUICellGearInv);
 consumablesGroup = new cellGroup(oUICellConsumableInv);
 
-/*if(oPlayer != noone){
-  forEachList(inventoryGroup.ordered, function(i, cell){ 
-     cell.ItemAdded.AddListener(function(item){ 
-        //oPlayer.equip(item);
-     });
-  });
-}

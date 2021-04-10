@@ -21,18 +21,6 @@ HoveredEnd.AddListener(function(){
 	isHovered = false;
 });
 
-/*onDrop = function(payload){
-    if(TryReceiveDrop(payload)){
-        var _lastContainedItem = containedItem;
-        containedItem = payload;
-        if(_lastContainedItem != undefined){
-            return _lastContainedItem;
-        }
-        return true;
-    }
-    return undefined;
-}; 
-*/
 startDrag = function(){
 	cachedItem = containedItem;
 	containedItem = undefined;

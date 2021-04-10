@@ -11,8 +11,13 @@ global.characterData = {
 	maxShields : 10,
 	curShields : 0,
 	spellXP : 0,
-	itemInventory : ds_grid_create(3,8)
 	
 }
 
-ds_grid_clear(global.characterData.itemInventory, -1);
+ function equip(item){
+	item.lookUp.onEquip(item.level);
+ }
+ 
+ function unequip(item){
+	item.lookUp.onDequip(item.level);     
+ }
