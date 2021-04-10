@@ -3,9 +3,17 @@
 
 // Inherit the parent event
 event_inherited();
+ItemAdded.AddListener(function(){
+//	containedItem.lookUp.onEquip();
+});
+ItemRemoved.AddListener(function(){
+//	containedItem.lookUp.onDequip();
+});
 
-dropVerification = function(payload){
-    if(payload.lookUp.itemType == itemCat.equipment && payload.lookUp.equipmentType == designatedEquip){
-		return true;
-	} else { return false;}
-};
+Parent_Validate = Validate;
+Validate = function(payload){
+   var parentYes = Parent_Validate(payload);
+   if(!parentYes) return false;
+   if(payload.lookUp.itemType == itemCat.equipment && payload.lookUp.equipmentType == designatedEquip){return true}
+   return false;
+}

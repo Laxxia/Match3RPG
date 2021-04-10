@@ -56,6 +56,10 @@ function equipableGear (gearPiece) constructor {
 	level = 0;
 }
 
+function ConsumableItem (_consumable) constructor {
+	lookUp = _consumable;
+}
+
 function scrInventoryAdd(itemData){
 	var grid = global.characterData.itemInventory;
 

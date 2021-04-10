@@ -8,9 +8,16 @@ currentPayload = undefined;
 hoverCell = noone;
 dragCell = noone;
 isDragging = false;
+inventoryGroup = noone
+consumablesGroup = noone 
 
-function dragDropPayload(_item, _dragDropTag) constructor {
-	sprite = _item.lookUp.sprite;
-	dragDropTag = _dragDropTag;
+inventoryGroup = new cellGroup(oUICellGearInv);
+consumablesGroup = new cellGroup(oUICellConsumableInv);
+
+/*if(oPlayer != noone){
+  forEachList(inventoryGroup.ordered, function(i, cell){ 
+     cell.ItemAdded.AddListener(function(item){ 
+        //oPlayer.equip(item);
+     });
+  });
 }
-

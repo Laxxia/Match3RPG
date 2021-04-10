@@ -5,17 +5,24 @@ height = sprite_height;
 isHovered = false;
 containedItem = undefined;
 cachedItem = undefined;
+orderIndex = -1;
 
-onHoverBegin = function(){
+ItemAdded = new Delegate();
+ItemRemoved = new Delegate();
+HoveredStart = new Delegate();
+HoveredEnd = new Delegate();
+Dropped = new Delegate();
+
+HoveredStart.AddListener(function(){
 	isHovered = true;
-};
+});
 
-onHoverEnd = function(){
+HoveredEnd.AddListener(function(){
 	isHovered = false;
-};
+});
 
-onDrop = function(payload){
-    if(dropVerification(payload)){
+/*onDrop = function(payload){
+    if(TryReceiveDrop(payload)){
         var _lastContainedItem = containedItem;
         containedItem = payload;
         if(_lastContainedItem != undefined){
@@ -24,8 +31,8 @@ onDrop = function(payload){
         return true;
     }
     return undefined;
-};
-
+}; 
+*/
 startDrag = function(){
 	cachedItem = containedItem;
 	containedItem = undefined;
@@ -42,8 +49,21 @@ onDragCancel = function(){
 	cachedItem = undefined;
 }
 
-onRightClick = function(payload){
-	if(rightClickVerification(payload)){
-		
-	}
+canAcceptItem = function(payload){
+	return Validate(payload);
 }
+
+giveItem = function(payload){
+	containedItem = payload;
+	Dropped.Invoke(payload);
+	ItemAdded.Invoke(payload);
+}
+
+takeItem = function(){
+	if(containedItem != undefined){
+		ItemRemoved.Invoke(containedItem);
+	}
+	return containedItem;
+}
+
+Validate = function(payload){return true};

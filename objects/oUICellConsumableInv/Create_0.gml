@@ -3,9 +3,10 @@
 
 // Inherit the parent event
 event_inherited();
-
-dropVerification = function(payload){
-    if(payload.lookUp.itemType == itemCat.consumable || payload.lookUp.itemType == itemCat.material ){
-		return true;
-	} else { return false;}
-};
+Parent_Validate = Validate;
+Validate = function(payload){
+   var parentYes = Parent_Validate(payload);
+   if(!parentYes) return false;
+   if(payload.lookUp.itemType == itemCat.consumable || payload.lookUp.itemType == itemCat.material){return true}
+   return false;
+}
