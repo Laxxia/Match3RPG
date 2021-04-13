@@ -26,26 +26,14 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [
-    {"varType":6,"value":"undefined","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
-        "equipmentTypes.head",
-        "equipmentTypes.chest",
-        "equipmentTypes.gloves",
-        "equipmentTypes.boots",
-        "equipmentTypes.legs",
-        "equipmentTypes.weapon",
-        "equipmentTypes.shield",
-        "equipmentTypes.amulet",
-        "undefined",
-      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"designatedEquip","tags":[],"resourceType":"GMObjectProperty",},
-  ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "InventoryStuff",
     "path": "folders/Objects/InventoryStuff.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oUICellEquipGear",
+  "name": "oUICellGearInv",
   "tags": [],
   "resourceType": "GMObject",
 }

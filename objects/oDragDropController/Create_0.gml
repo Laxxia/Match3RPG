@@ -10,7 +10,9 @@ dragCell = noone;
 isDragging = false;
 inventoryGroup = noone
 consumablesGroup = noone 
+potionsHotbarGroup = noone;
 
 inventoryGroup = new cellGroup(oUICellGearInv);
 consumablesGroup = new cellGroup(oUICellConsumableInv);
+potionsHotbarGroup = new cellGroup(oUICellPotionHotbar);
 

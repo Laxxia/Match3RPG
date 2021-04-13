@@ -1,8 +1,19 @@
 
 Immediate to-do
-- add base level progression to the gear and get item's to actually be equipable
-- make an hp potion that you can buy.
-- a spell that effects the board
+-Finish the UI elements
+	- Crafting slots that work - a list that triggers a craft probably
+	- Player Stats
+	- Make the gear level up UI pop up
+	- level up should then just work
+	- stackable items
+- Fix the  equip script what ever is going on there
+- add some level up content
+- redo the gem actions to actually match what we're doing
+- make monsters drop shit probably
+- potentially create the path of 5 monsters, rest, 3 monsters shop
+- for now a shop will probably be a pop up mans, but later its replacing the gem table
+
+	
 
 long term todo
 - add what the bad does - potentially nothing until added.
