@@ -5,10 +5,10 @@ function scrMatchAction(matchType, matchCount, special){
 		case jewelType.attack:
 			scrPlayerAttack(matchCount, special);
 		break;
-		case jewelType.magic:
-			scrPlayerMagic(matchCount, special)
+		case jewelType.luck:
+			scrPlayerLuck(matchCount, special)
 		break;
-		case jewelType.heal:
+		case jewelType.shields:
 			scrPlayerShields(matchCount, special);
 		break;
 		case jewelType.bad:

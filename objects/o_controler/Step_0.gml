@@ -161,5 +161,5 @@ if(instance_number(o_jewel)>global.board_num_x_jewels*global.board_num_y_jewels)
 
 //COOL  THIS WORKS SUPER EZ SQUEEKY CLEAN
 if(keyboard_check_pressed(ord("L"))){
-	scrChangeJewel(jewelType.attack, jewelType.magic);
+	scrChangeJewel(jewelType.attack, jewelType.luck);
 }

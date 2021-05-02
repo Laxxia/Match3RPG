@@ -9,10 +9,10 @@ function scrGemDeclare(ins){
 			ins.gemType = jewelType.attack;
 		break;
 		case 1:
-			ins.gemType = jewelType.magic;
+			ins.gemType = jewelType.luck;
 		break;
 		case 2:
-			ins.gemType = jewelType.heal;
+			ins.gemType = jewelType.shields;
 		break;
 		case 3:
 			ins.gemType = jewelType.bad;

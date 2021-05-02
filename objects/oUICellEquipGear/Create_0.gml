@@ -3,17 +3,18 @@
 
 // Inherit the parent event
 event_inherited();
-ItemAdded.AddListener(function(){
-	if(oPlayer != noone){
-		oPlayer.equip(containedItem);
-	}
+ItemAdded.AddListener(function(args){
+    var item = args;
+    if(oPlayer != noone){
+        oCharacterData.equip(item);
+    }
 });
-ItemRemoved.AddListener(function(){
-	if(oPlayer != noone){
-		oPlayer.unequip(containedItem);
-	}
+ItemRemoved.AddListener(function(args){
+    var item = args;
+    if(oPlayer != noone){
+        oCharacterData.unequip(item);
+    }
 });
-
 Parent_Validate = Validate;
 Validate = function(payload){
    var parentYes = Parent_Validate(payload);

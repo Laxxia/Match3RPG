@@ -5,7 +5,12 @@
 event_inherited();
 
 consumePotion = function(){
-	containedItem = undefined;
+	if(containedItem != undefined){
+		var wasConsumed = containedItem.lookUp.onConsume();
+		if(wasConsumed){
+			containedItem = undefined;
+		}
+	}
 }
 
 Parent_Validate = Validate;

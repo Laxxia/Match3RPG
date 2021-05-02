@@ -3,9 +3,9 @@
 function Delegate() constructor { 
    handlers = ds_list_create(); 
    
-   Invoke = function(){ 
-      for(var i = 0; i < ds_list_size(handlers); i++){ 
-          ds_list_find_value(handlers, i)();
+   Invoke = function(args){ 
+      for(var i = 0; i < ds_list_size(handlers); i++){
+		ds_list_find_value(handlers, i)(args);
       }
    }
 

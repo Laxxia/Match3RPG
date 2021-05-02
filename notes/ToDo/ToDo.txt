@@ -1,33 +1,33 @@
 
 Immediate to-do
 
-	GET THIS DONE:
-	- Player Stats
-	- the button to clear out of the levelup menu
-	- Hover stats for items probably actually...(This should be able to be added for in the onHover invoke with that one thing I got)
+	- Refactoring fun town -- Change all instances of access to the characterData global variable, with an oPlayerData accessor function that will touch that struct. 
+	Make enemies drop experience and potentially equippable gear?
+	Add a visual health bar over their head
+	Redo the gem actions to actually match what we're doing
+    Equip scripts need to be reworked to handle leveling, and then we are guccii gucciiii GANG mother fucker
+		
+
 
 
 -Finish the UI elements
 	- Crafting slots that work - a list that triggers a craft probably
 	- stackable items
-- Fix the  equip script what ever is going on there
 - add some level up content
-- redo the gem actions to actually match what we're doing
-- make monsters drop shit probably
 - for now a shop will probably be a pop up mans, but later its replacing the gem table
 
 	
 
 long term todo
+- maybe random buffs on equipment?
 - add what the bad does - potentially nothing until added.
 - different enemies have different abilities
 - work on the animations for the -- Should be easy enough to do, most of its done its just hooking it in 
 	-player, 
 	-enemy
-- UI elements. 
 - combos
-- experience and leveling up for gear
 - enemy variation (perhaps an enemy that might heal?)
+- Hover stats for items probably actually...(This should be able to be added for in the onHover invoke with that one thing I got)
 
 
 later later ideas

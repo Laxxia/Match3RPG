@@ -29,6 +29,7 @@ startDrag = function(){
 };
 
 onDragSuccess = function(){
+	ItemRemoved.Invoke(cachedItem);
 	cachedItem = undefined;
 }
 
