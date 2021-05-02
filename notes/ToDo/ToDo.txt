@@ -1,16 +1,22 @@
 
 Immediate to-do
+
+-Make the level up event and button right now.
+
+	- Make the gear level up UI pop up
+		-The button that will level up the piece of gear
+			-which menas probably dequip and requip at new level to apply stat boosts
+		- the button to clear out of the menu
+		- level up should then just work
+
 -Finish the UI elements
 	- Crafting slots that work - a list that triggers a craft probably
 	- Player Stats
-	- Make the gear level up UI pop up
-	- level up should then just work
 	- stackable items
 - Fix the  equip script what ever is going on there
 - add some level up content
 - redo the gem actions to actually match what we're doing
 - make monsters drop shit probably
-- potentially create the path of 5 monsters, rest, 3 monsters shop
 - for now a shop will probably be a pop up mans, but later its replacing the gem table
 
 	
@@ -30,6 +36,7 @@ long term todo
 later later ideas
 - shields as equipment - offensive shields.
 - while you have shields potentially heal. 
+- elemental combos when an ement has a element hit it for x seconds another element combos somehow
 
 
 

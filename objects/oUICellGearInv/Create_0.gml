@@ -10,3 +10,4 @@ Validate = function(payload){
    if(payload.lookUp.itemType == itemCat.equipment){return true}
    return false;
 }
+

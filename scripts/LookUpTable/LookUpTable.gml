@@ -51,9 +51,21 @@ function Consumable (itemType,itemName,description,onConsume,cost,sprite) constr
 
 function equipableGear (gearPiece) constructor {
 	lookUp = gearPiece;
-	mapXP = 400;
-	xp = 0;
-	level = 0;
+	lvlUpCost = [400, 600, 1000, 1200];
+	level = 1;
+	maxLevel = array_length(lvlUpCost) + 1;
+	isEquipped = false;
+	levelUp = function(){
+		if(level == maxLevel){
+			exit;
+		}
+		if(isEquipped){
+			lookUp.onDequip(level);
+			level ++;
+			lookUp.onEquip(level);
+		} else {level ++;}
+	}
+	
 }
 
 function ConsumableItem (_consumable) constructor {

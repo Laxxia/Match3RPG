@@ -10,7 +10,8 @@ global.characterData = {
 	target : noone,
 	maxShields : 10,
 	curShields : 0,
-	spellXP : 0,
+	curXP : 0,
+	spellXP : 0
 	
 }
 

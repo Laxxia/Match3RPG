@@ -16,3 +16,7 @@ if(keyboard_check_pressed(ord("P"))){
 if(global.characterData.curHP <= 0){
 	scr_restart_level()
 }
+
+if(keyboard_check_pressed(ord("G"))){
+	global.characterData.curXP += 1000;
+}

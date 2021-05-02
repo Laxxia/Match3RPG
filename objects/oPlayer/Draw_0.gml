@@ -6,6 +6,7 @@ draw_text(x, y + 100, "hp: " + string(global.characterData.curHP) + "/" + string
 draw_text(x, y + 125, "shields: " + string(global.characterData.curShields));
 draw_text(x, y + 150, "mana: " + string(global.characterData.curMana));
 draw_text(x, y + 175, "Gold: " + string(global.characterData.gold));
+draw_text(x, y + 200, "Xperience: " + string(global.characterData.curXP));
 
 if(global.playerGear.helmet.item != -1){
 	draw_text(x, y + 200, "Helmet: " + string(global.playerGear.helmet.item.lookUp.itemName));
