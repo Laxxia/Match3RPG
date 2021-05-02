@@ -1,17 +1,14 @@
 
 Immediate to-do
 
--Make the level up event and button right now.
+	GET THIS DONE:
+	- Player Stats
+	- the button to clear out of the levelup menu
+	- Hover stats for items probably actually...(This should be able to be added for in the onHover invoke with that one thing I got)
 
-	- Make the gear level up UI pop up
-		-The button that will level up the piece of gear
-			-which menas probably dequip and requip at new level to apply stat boosts
-		- the button to clear out of the menu
-		- level up should then just work
 
 -Finish the UI elements
 	- Crafting slots that work - a list that triggers a craft probably
-	- Player Stats
 	- stackable items
 - Fix the  equip script what ever is going on there
 - add some level up content
