@@ -3,7 +3,7 @@
 var choice = actions[ irandom_range(0, array_length(actions)-1) ]
 switch(choice){
 	case "attack":
-	scrAttackPlayer(attack);
+	attackPlayer(attack);
 	break;
 }
 alarm[0] = room_speed*attackSpeed;

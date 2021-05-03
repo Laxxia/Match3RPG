@@ -1,65 +1,68 @@
 /// @description Insert description here
 // You can write your code in this editor
-characterData = {
-	maxHP : 10,
-	curHP : 10,
-	maxMana : 100,
-	curMana : 0,
-	gold : 0,
-	chargeCount : 0,
-	target : noone,
-	maxShields : 10,
-	curShields : 0,
-	curXP : 0,
-	curLuck : 0,
-	attackDmg : 5
+
+function characterInstantiate(){
+	characterData = {
+		maxHP : 10,
+		curHP : 10,
+		maxMana : 100,
+		curMana : 0,
+		gold : 0,
+		chargeCount : 0,
+		target : noone,
+		maxShields : 10,
+		curShields : 0,
+		curXP : 0,
+		curLuck : 0,
+		attackDmg : 5
 	
-	//currentAttackDmgLower : 3,
-	//currentAttackDmgUpper : 5
-	
+		//currentAttackDmgLower : 3,
+		//currentAttackDmgUpper : 5
+	}
 }
+characterInstantiate();
 #region //Getters
-function getMaxHP(){
+getMaxHP = function(){
 	return characterData.maxHP;
 }
 
-function getCurHP(){
+getCurHP = function(){
 	return characterData.curHP;
 }
 
-function getMaxShields(){
+getMaxShields = function(){
 	return characterData.maxShields;
 }
 
-function getCurShields(){
+getCurShields = function(){
 	return characterData.curShields;
 }
-function getMaxMana(){
+getMaxMana = function(){
 	return characterData.maxMana;
 }
-function getCurMana(){
+getCurMana = function(){
 	return characterData.curMana;
 }
-function getCurGold(){
+getCurGold = function(){
 	return characterData.gold;
 }
-function getCurLuck(){
+getCurLuck = function(){
 	return characterData.curLuck;
 }
 
-function getChargeValue(){
+getChargeValue = function(){
 	return characterData.chargeCount;
 }
 
-function getTarget(){
-	return characterData.target
+getTarget = function(){
+	return characterData.target;
 }
 
-function getCurXP(){
-	return characterData.curXP
+getCurXP = function(){
+	return characterData.curXP;
 }
 
-function getCurAttackDmg(){
+getCurAttackDmg = function(){
 	return characterData.attackDmg;
 }
 #endregion
@@ -84,6 +87,13 @@ function getCurAttackDmg(){
 	else {characterData.curShields += value;}
  }
  
+ function loseShields(value){
+	characterData.curShields -= value;
+	if(getCurShields() < 0){
+		characterData.curShields = 0;
+	}
+ }
+ 
  function gainMana(value){
 	var _cur = characterData.curMana;
 	var _max = characterData.maxMana;
@@ -93,6 +103,10 @@ function getCurAttackDmg(){
  
  function gainGold(value){
 	characterData.gold += value;
+ }
+ 
+ function increaseDamage(value){
+	characterData.attackDmg += value;
  }
  
  function increaseLuck(value){
@@ -116,4 +130,31 @@ function getCurAttackDmg(){
 	} else {characterData.curHP += healingValue;}
 	return true;
  }
+ 
+ function loseHP(lossValue){
+	characterData.curHP -= lossValue;
+	if(getCurHP() <= 0){
+		scr_restart_level()
+	}
+ }
+ 
+ function dealDamage(damage){
+	var target = characterData.target;
+	if(target != noone){
+		characterData.target.enemyTakeDamage(damage);
+	}
+		
+}
+
+function takeDamage(damage){
+	if(getCurShields() - damage > 0){
+		loseShields(damage);
+	} else if (getCurShields() > 0){
+		var temp = damage - getCurShields();
+		characterData.curShields = 0;
+		loseHP(temp);
+	} else {
+		loseHP(damage);
+	}
+}
 #endregion

@@ -1,10 +1,8 @@
 
 Immediate to-do
 
-	- Refactoring fun town -- Change all instances of access to the characterData global variable, with an oPlayerData accessor function that will touch that struct. 
 	Make enemies drop experience and potentially equippable gear?
-	Add a visual health bar over their head
-	Redo the gem actions to actually match what we're doing
+	Add a visual health bar over their head - enemy and player
     Equip scripts need to be reworked to handle leveling, and then we are guccii gucciiii GANG mother fucker
 		
 

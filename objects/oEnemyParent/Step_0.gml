@@ -3,15 +3,11 @@
 if(global.pause){exit;}
 switch(state){
 	case "approach":
-		scrEnemyMove();
+		enemyMove();
 	break;
 	case "attack":
 		scrParallaxControl(true);
 		alarm[0] = room_speed*attackSpeed;
 		state = "attacking";
 	break;
-}
-
-if(curHP <= 0){
-	instance_destroy();
 }

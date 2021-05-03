@@ -18,14 +18,10 @@ function scrMatchAction(matchType, matchCount, special){
 			scrPlayerGold(matchCount, special);
 		break;
 		case jewelType.charge: 
-			global.characterData.chargeCount ++;
+			oCharacterData.chargeUp(matchCount);
 		break;
 		case jewelType.mana:
-			if(global.characterData.maxMana - global.characterData.curMana < 7){
-				global.characterData.curMana += (global.characterData.maxMana - global.characterData.curMana);
-			} else {
-				global.characterData.curMana += 7;
-			}
+			oCharacterData.gainMana(7);
 		break;
 	}
 }
