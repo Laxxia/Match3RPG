@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprCell",
-    "path": "sprites/sprCell/sprCell.yy",
+    "name": "sprCellSpellHB",
+    "path": "sprites/sprCellSpellHB/sprCellSpellHB.yy",
   },
   "solid": false,
   "visible": true,

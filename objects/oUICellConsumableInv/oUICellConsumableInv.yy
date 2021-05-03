@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprCell",
-    "path": "sprites/sprCell/sprCell.yy",
+    "name": "sprCellConsumable",
+    "path": "sprites/sprCellConsumable/sprCellConsumable.yy",
   },
   "solid": false,
   "visible": true,

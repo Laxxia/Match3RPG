@@ -10,7 +10,7 @@ with(oUICellSlot){
 //debug gimme item
 if(keyboard_check(vk_space)){
 	if(mouse_check_button(mb_left)){
-		var item = new equipableGear(global.lookUpTable.IronSword);
+		var item = new equipableGear(getItemData("IronSword"));
 		currentPayload = item;
 		isDragging = true;
 	}
@@ -18,7 +18,7 @@ if(keyboard_check(vk_space)){
 
 if(keyboard_check(vk_shift)){
 	if(mouse_check_button(mb_left)){
-		var item = new ConsumableItem(global.lookUpTable.HealthPotion);
+		var item = new ConsumableItem(getItemData("HealthPotion"));
 		currentPayload = item;
 		isDragging = true;
 	}
@@ -26,7 +26,7 @@ if(keyboard_check(vk_shift)){
 
 if(keyboard_check(vk_space)){
 	if(mouse_check_button_pressed(mb_right)){
-		var item = new equipableGear(global.lookUpTable.CopperSword);
+		var item = new equipableGear(getItemData("CopperSword"));
 		var cell = inventoryGroup.getFreeCell(item);
 		cell.giveItem(item);
 	}

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprCell",
-    "path": "sprites/sprCell/sprCell.yy",
+    "name": "sprCellGearInv",
+    "path": "sprites/sprCellGearInv/sprCellGearInv.yy",
   },
   "solid": false,
   "visible": true,

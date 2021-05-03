@@ -1,5 +1,5 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @description Insert description here
+// You can write your code in this editor
 global.lookUpTable = {
 		IronSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 
 		function(){oCharacterData.increaseDamage(5);},
@@ -49,6 +49,9 @@ function Consumable (itemType,itemName,description,onConsume,cost,sprite) constr
   self.sprite = sprite
 }
 
+function getItemData(item){
+	return variable_struct_get(global.lookUpTable, item)
+}
 
 function equipableGear (gearPiece) constructor {
 	lookUp = gearPiece;

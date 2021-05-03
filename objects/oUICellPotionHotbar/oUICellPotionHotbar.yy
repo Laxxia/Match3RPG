@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprCell",
-    "path": "sprites/sprCell/sprCell.yy",
+    "name": "sprCellConsumeHB",
+    "path": "sprites/sprCellConsumeHB/sprCellConsumeHB.yy",
   },
   "solid": false,
   "visible": true,
