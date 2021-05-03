@@ -1,9 +1,13 @@
 
 Immediate to-do
-
+	Make the amuletes on equip and on dequip push their spell's into the spell hotbars, whichever is empty I suppose, 
+	so make a group in the dragdrop and then a function in there to do it for you actually
+	Also make spell hotbar have their declared character to be pressed
+	
 	Make enemies drop experience and potentially equippable gear?
-	Add a visual health bar over their head - enemy and player
-    Equip scripts need to be reworked to handle leveling, and then we are guccii gucciiii GANG mother fucker
+    
+	Equip scripts need to be reworked to handle leveling, and then we are guccii gucciiii GANG mother fucker
+		I still am uncertain how to best do equip scripts :c
 		
 
 
@@ -11,6 +15,7 @@ Immediate to-do
 -Finish the UI elements
 	- Crafting slots that work - a list that triggers a craft probably
 	- stackable items
+	- display shield over healthbar somehow
 - add some level up content
 - for now a shop will probably be a pop up mans, but later its replacing the gem table
 
