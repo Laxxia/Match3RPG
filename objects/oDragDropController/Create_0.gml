@@ -11,8 +11,10 @@ isDragging = false;
 inventoryGroup = noone
 consumablesGroup = noone 
 potionsHotbarGroup = noone;
+spellHotbarGroup = noone;
 
 inventoryGroup = new cellGroup(oUICellGearInv);
 consumablesGroup = new cellGroup(oUICellConsumableInv);
 potionsHotbarGroup = new cellGroup(oUICellPotionHotbar);
+spellHotbarGroup = new cellGroup(oUICellSpellHotbar);
 

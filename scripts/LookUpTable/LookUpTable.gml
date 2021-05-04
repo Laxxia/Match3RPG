@@ -22,6 +22,14 @@ global.lookUpTable = {
 		function(){oCharacterData.characterData.maxShields -= 5;},
 		5, 3,setType.iron, sprCHelm),
 		
+		FireAmulet: new Equipment(itemCat.equipment, equipmentTypes.amulet, "Fire Amulet", "Let's you cast Fireball", 
+		function(){
+			var target = oDragDropController.spellHotbarGroup.getFreeCell();
+			hotkeySpell("FireAmulet");		
+			},
+		function(){oCharacterData.characterData.maxShields -= 5;},
+		5, 3,setType.iron, sprAmulet),
+		
 		HealthPotion: new  Consumable(itemCat.consumable, "Health Potion", "This is a health potion",
 		function(){return oCharacterData.heal(5);},
 		5, sprUiHealthPotion)
@@ -39,6 +47,21 @@ function Equipment (itemType,equipmentType,itemName,description,onEquip,onDequip
   self.set = set
   self.sprite = sprite //probably group them, so all swords are one sprite, and then have the sprite_index be the specific sword
 }
+
+global.spellLookUp = {
+	//Fireball: new spellCreate(){} 
+}
+
+function spellCreate () constructor{
+	
+}
+
+function hotkeySpell(spell){
+	var freeCell = oDragDropController.spellHotbarGroup.getFreeCell();
+	freeCell.giveItem(getItemData(spell));
+	
+}
+
 
 function Consumable (itemType,itemName,description,onConsume,cost,sprite) constructor{
   self.itemType = itemType

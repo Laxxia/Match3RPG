@@ -1,8 +1,9 @@
 
 Immediate to-do
-	Make the amuletes on equip and on dequip push their spell's into the spell hotbars, whichever is empty I suppose, 
-	so make a group in the dragdrop and then a function in there to do it for you actually
 	Also make spell hotbar have their declared character to be pressed
+	Still on equip scripts, finish up the spell logic, it like...'works' right now
+	but we aren't transfering the data like we should be in any normal way, but this alllll cycles back
+	to equip scripts and spell look ups. 
 	
 	Make enemies drop experience and potentially equippable gear?
     

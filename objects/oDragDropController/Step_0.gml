@@ -26,7 +26,7 @@ if(keyboard_check(vk_shift)){
 
 if(keyboard_check(vk_space)){
 	if(mouse_check_button_pressed(mb_right)){
-		var item = new equipableGear(getItemData("CopperSword"));
+		var item = new equipableGear(getItemData("FireAmulet"));
 		var cell = inventoryGroup.getFreeCell(item);
 		cell.giveItem(item);
 	}
