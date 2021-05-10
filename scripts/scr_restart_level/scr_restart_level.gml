@@ -1,6 +1,6 @@
 function scr_restart_level() {
 	global.pause = false;
-	characterInstantiate();
+	oCharacterData.characterInstantiate();
 	room_restart();
 
 }

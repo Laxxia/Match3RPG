@@ -17,3 +17,11 @@ if(keyboard_check_pressed(ord("P"))){
 if(keyboard_check_pressed(ord("G"))){
 	oCharacterData.gainExperience(1000);
 }
+
+if(animateOnce){
+	if(animationEndCheck()){
+		if(oCharacterData.getTarget() != noone){
+			stateChange(playerState.idle, s_charIdle, false);
+		} else {stateChange(playerState.walking, s_charWalk, false);}
+	}
+}

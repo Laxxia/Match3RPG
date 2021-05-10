@@ -1,15 +1,8 @@
 
-Immediate to-do
-	Also make spell hotbar have their declared character to be pressed
-	Still on equip scripts, finish up the spell logic, it like...'works' right now
-	but we aren't transfering the data like we should be in any normal way, but this alllll cycles back
-	to equip scripts and spell look ups. 
-	
+Immediate to-do	
 	Make enemies drop experience and potentially equippable gear?
-    
-	Equip scripts need to be reworked to handle leveling, and then we are guccii gucciiii GANG mother fucker
-		I still am uncertain how to best do equip scripts :c
-		
+		-probably involves declaring drop pools in the enemy spawner but like..blegh that sounds hard, lets think on how 
+		to approach this
 
 
 
@@ -25,19 +18,18 @@ Immediate to-do
 long term todo
 - maybe random buffs on equipment?
 - add what the bad does - potentially nothing until added.
-- different enemies have different abilities
-- work on the animations for the -- Should be easy enough to do, most of its done its just hooking it in 
-	-player, 
-	-enemy
 - combos
-- enemy variation (perhaps an enemy that might heal?)
 - Hover stats for items probably actually...(This should be able to be added for in the onHover invoke with that one thing I got)
+-hidden stats till y ou discover it
+-charging at certain levels will be what you have to do to perform certain skills that you unlock for the weapons or amulets or 
+maybe even like shield ups and shit, endless posibilities
 
 
 later later ideas
 - shields as equipment - offensive shields.
 - while you have shields potentially heal. 
 - elemental combos when an ement has a element hit it for x seconds another element combos somehow
+- multiple party members each unique gem board?
 
 
 
@@ -66,6 +58,4 @@ shop is where you can get gear
 boss's/mini bosses
 normal mobs drop gear. 
 
-
-test push
 

@@ -3,7 +3,7 @@
 var choice = actions[ irandom_range(0, array_length(actions)-1) ]
 switch(choice){
 	case "attack":
-	attackPlayer(attack);
+	enemyStateChange(enemyState.attacking, spriteArray[enemyState.attacking], true);
 	break;
 }
 alarm[0] = room_speed*attackSpeed;

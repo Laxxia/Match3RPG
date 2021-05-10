@@ -11,12 +11,9 @@ function scrEnum(){
         mana = 6
 	}
 	enum enemies{
-		frog
+		frog,
+		lizard
 	}
-	enum spellType{
-		damage
-	}
-
 	/*enum itemID{
 		IronSword,
 		IronShield,

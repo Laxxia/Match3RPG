@@ -18,7 +18,7 @@ if(keyboard_check(vk_space)){
 
 if(keyboard_check(vk_shift)){
 	if(mouse_check_button(mb_left)){
-		var item = new ConsumableItem(getItemData("HealthPotion"));
+		var item = new equipableGear(getItemData("LuckyAmulet"));
 		currentPayload = item;
 		isDragging = true;
 	}

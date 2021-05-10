@@ -4,8 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-if(keyboard_check_pressed(ord(string(orderIndex + 1)))){
-	consumePotion();
+if(keyboard_check_pressed(ord(castKey))){
+	castSpell();
 }
-
-if(true){}

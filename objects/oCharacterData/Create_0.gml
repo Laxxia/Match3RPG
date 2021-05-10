@@ -14,11 +14,13 @@ function characterInstantiate(){
 		curShields : 0,
 		curXP : 0,
 		curLuck : 0,
-		attackDmg : 5
+		attackDmg : 0,
+		baseDmg : 1
 	
 		//currentAttackDmgLower : 3,
 		//currentAttackDmgUpper : 5
 	}
+	characterData.attackDmg = characterData.baseDmg;
 }
 characterInstantiate();
 #region //Getters
@@ -70,10 +72,12 @@ getCurAttackDmg = function(){
 #region //Setters
  function equip(item){
 	item.lookUp.onEquip(item.level);
+	item.isEquipped = true;
  }
  
  function unequip(item){
-	item.lookUp.onDequip(item.level);     
+	item.lookUp.onDequip(item.level);   
+	item.isEquipped = false;
  }
  
  function gainExperience(value){
@@ -101,12 +105,26 @@ getCurAttackDmg = function(){
 	else {characterData.curMana += value;}
  }
  
+ function spendMana(value){
+	var _cur = characterData.curMana;
+	if(_cur - value < 0){
+		return false;
+	} else {
+		characterData.curMana -= value;
+		return true;
+	}
+ }
+ 
  function gainGold(value){
 	characterData.gold += value;
  }
  
  function increaseDamage(value){
 	characterData.attackDmg += value;
+ }
+ 
+ function decreaseDamage(value){
+	characterData.attackDmg -=  value;
  }
  
  function increaseLuck(value){
@@ -139,11 +157,13 @@ getCurAttackDmg = function(){
  }
  
  function dealDamage(damage){
-	var target = characterData.target;
+	var target = oCharacterData.getTarget();
 	if(target != noone){
-		characterData.target.enemyTakeDamage(damage);
+		oPlayer.tempDamage = damage;
+		if(instance_exists(oPlayer)){
+			oPlayer.stateChange(playerState.attacking, s_charAttack, true);
+		}
 	}
-		
 }
 
 function takeDamage(damage){
@@ -156,5 +176,16 @@ function takeDamage(damage){
 	} else {
 		loseHP(damage);
 	}
+	takeDamageAnim();
 }
+
+function takeDamageAnim(){
+	if(instance_exists(oPlayer)){
+		if(oPlayer.state != playerState.attacking){
+			oPlayer.stateChange(playerState.hurt, s_charHurt, true);
+		}
+		//Maybe else just blink red? do the same for the enemy?
+	}
+}
+
 #endregion
