@@ -19,6 +19,7 @@
     {"id":{"name":"s_Close","path":"sprites/s_Close/s_Close.yy",},"order":25,},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},"order":3,},
     {"id":{"name":"oUICellPotionHotbar","path":"objects/oUICellPotionHotbar/oUICellPotionHotbar.yy",},"order":5,},
+    {"id":{"name":"oShopMenu","path":"objects/oShopMenu/oShopMenu.yy",},"order":6,},
     {"id":{"name":"s_menu","path":"sprites/s_menu/s_menu.yy",},"order":3,},
     {"id":{"name":"scrNewMatch","path":"scripts/scrNewMatch/scrNewMatch.yy",},"order":9,},
     {"id":{"name":"sprInfoBox","path":"sprites/sprInfoBox/sprInfoBox.yy",},"order":26,},

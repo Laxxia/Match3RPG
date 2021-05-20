@@ -26,6 +26,8 @@ shopApproach = function(){
 		scrParallaxControl(true);
 		oCharacterData.setTarget(id);
 		oPlayer.stateChange(playerState.idle, s_charIdle, false);
+		global.pause = true;
+		var ins = instance_create_layer(room_width/2, room_height/2, "Menus", oShopMenu);
 	} else {x -= moveSpeed;}
 }
 
@@ -38,6 +40,7 @@ leaveShop = function(){
 	var range = irandom_range(0, oEnemySpawner.spawnRate) 
 	oEnemySpawner.alarm[0] = range * room_speed;
 	scrParallaxControl(false);
+	global.pause = false;
 	instance_destroy();
 }
 

@@ -81,7 +81,7 @@ var shouldPerformDrop = isDragging ? !mouse_check_button(mb_left) : mouse_check_
 	if(mouse_check_button_pressed(mb_right)){
 		if(hoverCell != noone && hoverCell.containedItem != undefined){
 			if(hoverCell.containedItem.lookUp.itemType == itemCat.equipment){
-				var inst = instance_create_layer(room_width/2, room_height/2, "Instances", oGearLvlUpMenu);
+				var inst = instance_create_layer(room_width/2, room_height/2, "Menus", oGearLvlUpMenu);
 				inst.giveItem(hoverCell.containedItem);
 				global.pause = true;
 			}

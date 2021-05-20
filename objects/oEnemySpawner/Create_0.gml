@@ -3,7 +3,7 @@
 spawnRate = 5;
 alarm[0] = room_speed*spawnRate;
 //This is how the level will loop  forever
-levelLayout = [levelEvent.monster, levelEvent.monster];
+levelLayout = [levelEvent.store, levelEvent.monster, levelEvent.store];
 
 currentPoint = 0;
 
