@@ -223,6 +223,17 @@ function hotkeySpell(spell){
 	freeCell.giveItem(curSpell);	
 }
 
+function groupItemOnType(type){
+	//var list = variable_struct_get_names(oLookUpTable.lookUpTable);
+	array = [];
+	forEachArray(variable_struct_get_names(oLookUpTable.lookUpTable), function(item){
+		if(item.itemType == type){
+			array_push(array, item);
+		}
+	})
+	return array;
+}
+
 function getItemData(item){
 	return variable_struct_get(global.lookUpTable, item)
 }

@@ -54,8 +54,7 @@ killInstance = function(){
 	oCharacterData.setTarget(noone);
 	oPlayer.stateChange(playerState.walking, s_charWalk, false);
 	//Essentially resume walking, so start the spawner up again, AND start the path moving again.
-	var range = irandom_range(0, oEnemySpawner.spawnRate) 
-	oEnemySpawner.alarm[0] = range * room_speed;
+	oEnemySpawner.alarm[0] = oEnemySpawner.spawnRate * room_speed;
 	scrParallaxControl(false);
 	instance_destroy();
 }
