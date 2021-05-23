@@ -67,6 +67,7 @@
     {"id":{"name":"font0","path":"fonts/font0/font0.yy",},"order":0,},
     {"id":{"name":"oDragDropController","path":"objects/oDragDropController/oDragDropController.yy",},"order":1,},
     {"id":{"name":"parallax_demon_woods_bg","path":"sprites/parallax_demon_woods_bg/parallax_demon_woods_bg.yy",},"order":15,},
+    {"id":{"name":"sprShieldBar","path":"sprites/sprShieldBar/sprShieldBar.yy",},"order":31,},
     {"id":{"name":"Delegate","path":"scripts/Delegate/Delegate.yy",},"order":19,},
     {"id":{"name":"s_frogWalk","path":"sprites/s_frogWalk/s_frogWalk.yy",},"order":0,},
     {"id":{"name":"oUICellGearInv","path":"objects/oUICellGearInv/oUICellGearInv.yy",},"order":2,},

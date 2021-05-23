@@ -18,3 +18,11 @@ consumablesGroup = new cellGroup(oUICellConsumableInv);
 potionsHotbarGroup = new cellGroup(oUICellPotionHotbar);
 spellHotbarGroup = new cellGroup(oUICellSpellHotbar);
 
+				
+initializeInventory = function(){
+	var item = new equipableGear(getItemData("IronSword"));
+	var cell = inventoryGroup.getFreeCell(item);
+	cell.giveItem(item);
+}
+
+initializeInventory();

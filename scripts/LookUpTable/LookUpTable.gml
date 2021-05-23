@@ -142,11 +142,11 @@ global.lookUpTable = {
 	function(){return oCharacterData.heal(5);},
 	5, sprUiHealthPotion),
 
-	FireBall: new spellCreate(spellType.attack, spellElement.fire, "Fire Ball", "It's a fireball", 
+	FireBall: new spellCreate(itemCat.spell, spellType.attack, spellElement.fire, "Fire Ball", "It's a fireball", 
 	function(){oCharacterData.getTarget().enemyTakeDamage(10);},
 	5, sprAmulet),
 	
-	LuckyAttack: new spellCreate(spellType.boardChange, spellElement.pure, "Lucky Attack", "Change your luck for attacks",
+	LuckyAttack: new spellCreate(itemCat.spell, spellType.boardChange, spellElement.pure, "Lucky Attack", "Change your luck for attacks",
 	function(){scrChangeJewel(jewelType.luck, jewelType.attack);},
 	5, sprAmulet)
 
@@ -201,7 +201,8 @@ function ConsumableItem (_consumable) constructor {
 	lookUp = _consumable;
 }
 
-function spellCreate (spellType, spellElement, spellName, spellDescription, onCast, cost, sprite) constructor{
+function spellCreate (itemType, spellType, spellElement, spellName, spellDescription, onCast, cost, sprite) constructor{
+	self.itemType = itemType
 	self.spellType = spellType
 	self.spellElement = spellElement
 	self.spellName = spellName
@@ -223,19 +224,19 @@ function hotkeySpell(spell){
 	freeCell.giveItem(curSpell);	
 }
 
-function groupItemOnType(type){
-	//var list = variable_struct_get_names(oLookUpTable.lookUpTable);
-	array = [];
-	forEachArray(variable_struct_get_names(oLookUpTable.lookUpTable), function(item){
-		if(item.itemType == type){
-			array_push(array, item);
-		}
-	})
-	return array;
+function groupItemOnType(_list, _type){
+    //var list = variable_struct_get_names(oLookUpTable.lookUpTable);
+    type = _type;
+	list = _list;
+    forEachArray(variable_struct_get_names(global.lookUpTable), function(item){
+        if(getItemData(item).itemType == type){
+            ds_list_add(list, getItemData(item));
+        }
+    })
 }
 
 function getItemData(item){
-	return variable_struct_get(global.lookUpTable, item)
+    return variable_struct_get(global.lookUpTable, item)
 }
 
 enum equipmentTypes{

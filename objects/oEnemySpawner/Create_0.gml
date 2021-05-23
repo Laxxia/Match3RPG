@@ -6,6 +6,7 @@ alarm[0] = room_speed*spawnRate;
 levelLayout = [levelEvent.store, levelEvent.monster, levelEvent.store];
 
 currentPoint = 0;
+level = 1;
 
 enemyTypes = ds_list_create();
 ds_list_add(enemyTypes, enemies.frog);
@@ -28,15 +29,16 @@ levelTrack = function(_currentPoint){
 }
 
 increasePoint = function(){
-	if(currentPoint == array_length(levelLayout) - 1){
+	if(currentPoint >= array_length(levelLayout) - 1){
 		currentPoint = 0;
+		level ++;
 	} else {currentPoint ++;}
 }
 
 spawnShop = function(){
 	var ins = instance_create_layer(1806, 434, "Events", oItemShop);
 	with(ins){
-		moveSpeed = 5;
+		moveSpeed = 15;
 	}
 }
 

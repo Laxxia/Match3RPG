@@ -37,7 +37,7 @@ leaveShop = function(){
 	//Essentially resume walking, so start the spawner up again, AND start the path moving again.
 	
 	//This is where we just progress the spawner.
-	var range = irandom_range(0, oEnemySpawner.spawnRate) 
+	var range = irandom_range(1, oEnemySpawner.spawnRate) 
 	oEnemySpawner.alarm[0] = range * room_speed;
 	scrParallaxControl(false);
 	global.pause = false;
