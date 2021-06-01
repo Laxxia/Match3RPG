@@ -96,7 +96,7 @@ global.lookUpTable = {
 	},
 	5, 3,setType.iron, sprHelm),
 		
-	CopperHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Copper Helm", "It's an Iron Helm", 
+	CopperHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Copper Helm", "It's a Copper Helm", 
 	function(level){
 		switch(level){
 			case 1:

@@ -25,4 +25,10 @@ initializeInventory = function(){
 	cell.giveItem(item);
 }
 
+createAndGive = function(_item, _group){
+		var item = new equipableGear(_item);
+		var cell = _group.getFreeCell(item);
+		cell.giveItem(item);
+}
+
 initializeInventory();

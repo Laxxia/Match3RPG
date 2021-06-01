@@ -11,6 +11,7 @@ ds_list_shuffle(itemPool);
 
 itemsSelected = [];
 
+
 var rand = -1;
 for (var i = 0; i < itemCount; i++){
 	rand = irandom(ds_list_size(itemPool) - 1);
