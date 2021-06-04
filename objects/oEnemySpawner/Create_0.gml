@@ -80,7 +80,7 @@ spawnEnemy = function(){
 				//add all sprites to a list, then access them via an enum so you have a generic script for it
 				image_xscale = .375;
 				image_yscale = .375; 
-				curHP = 10;
+				curHP = 9;
 				maxHP = curHP;
 				moveSpeed = 5;
 				attack = 1;

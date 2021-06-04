@@ -10,5 +10,6 @@ draw_text(xBuff, y + 100, "mana: " + string(oCharacterData.getCurMana()));
 draw_text(xBuff, y + 125, "Gold: " + string(oCharacterData.getCurGold()));
 draw_text(xBuff, y + 150, "Xperience: " + string(oCharacterData.getCurXP()));
 draw_text(xBuff, y + 175, "Attack: " + string(oCharacterData.getCurAttackDmg()));
+draw_text(xBuff, y + 200, "Charge: " + string(oCharacterData.getChargeValue()));
 
 draw_set_font(font0);

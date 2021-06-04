@@ -160,6 +160,10 @@ getCurAttackDmg = function(){
 	var target = oCharacterData.getTarget();
 	if(target != noone){
 		oPlayer.tempDamage = damage;
+		if(characterData.chargeCount > 0){
+			oPlayer.tempDamage += (oPlayer.tempDamage * (.15 * characterData.chargeCount));
+			characterData.chargeCount = 0;
+		}
 		if(instance_exists(oPlayer)){
 			oPlayer.stateChange(playerState.attacking, s_charAttack, true);
 		}
