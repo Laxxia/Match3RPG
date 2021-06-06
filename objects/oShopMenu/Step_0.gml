@@ -16,6 +16,8 @@ for (var i = 0; i < itemCount; i ++) {
   }
 }
 if (button_clicked != noone) {
-	oDragDropController.createAndGive(itemsSelected[button_clicked], oDragDropController.inventoryGroup);
-	itemsSelected[button_clicked] = -1;
+	if(purchase(itemsSelected[button_clicked])){
+		oDragDropController.createAndGive(itemsSelected[button_clicked], oDragDropController.inventoryGroup);
+		itemsSelected[button_clicked] = -1;
+	}
 }

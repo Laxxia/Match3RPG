@@ -20,7 +20,7 @@ spellHotbarGroup = new cellGroup(oUICellSpellHotbar);
 
 				
 initializeInventory = function(){
-	var item = new equipableGear(getItemData("IronSword"));
+	var item = new equipableGear(getItemData("Stick"));
 	var cell = inventoryGroup.getFreeCell(item);
 	cell.giveItem(item);
 }

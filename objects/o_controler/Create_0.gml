@@ -19,7 +19,7 @@ global.matchTypes = ds_list_create(); //hold all matched jewel types
 global.bottom_limit = global.board_off_y + global.board_pos_y + (global.board_num_y_jewels-1) * (global.jewel_y_size+global.jewels_dist); //jewels higher than this value will not fall
 global.up_position = global.board_off_y + global.board_pos_y;   //position for the new jewels
 
-global.num_of_colors = 7;//number of color in the game
+global.num_of_colors = 6;//number of color in the game
 global.level_score = 0;//level scor
 
 global.jewel_move_distance = 1;

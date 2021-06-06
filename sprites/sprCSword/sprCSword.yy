@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Item Sprites",
-    "path": "folders/Sprites/Item Sprites.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Item Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprCSword",

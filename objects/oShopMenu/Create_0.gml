@@ -25,3 +25,7 @@ closeWindow = function(){
 	instance_destroy(closeButton);
 	instance_destroy();
 }
+
+purchase = function(item){
+	return oCharacterData.spendGold(item.cost);
+}

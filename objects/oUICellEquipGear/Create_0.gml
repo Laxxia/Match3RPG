@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+image_speed = 0;
 // Inherit the parent event
 event_inherited();
 ItemAdded.AddListener(function(args){
@@ -22,3 +22,8 @@ Validate = function(payload){
    if(payload.lookUp.itemType == itemCat.equipment && payload.lookUp.equipmentType == designatedEquip){return true}
    return false;
 }
+
+instantiate = function(){
+	image_index = designatedEquip;
+}
+instantiate();

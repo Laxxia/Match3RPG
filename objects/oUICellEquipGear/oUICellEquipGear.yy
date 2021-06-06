@@ -27,7 +27,7 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":6,"value":"undefined","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+    {"varType":6,"value":"equipmentTypes.none","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "equipmentTypes.head",
         "equipmentTypes.chest",
         "equipmentTypes.gloves",
@@ -36,7 +36,7 @@
         "equipmentTypes.weapon",
         "equipmentTypes.shield",
         "equipmentTypes.amulet",
-        "undefined",
+        "equipmentTypes.none",
       ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"designatedEquip","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],

@@ -15,7 +15,10 @@ function characterInstantiate(){
 		curXP : 0,
 		curLuck : 0,
 		attackDmg : 0,
-		baseDmg : 1
+		baseDmg : 1,
+		onHit : ds_list_create()
+		//potentially for how to go through and add effects hwen you attack
+		
 	
 		//currentAttackDmgLower : 3,
 		//currentAttackDmgUpper : 5
@@ -84,6 +87,11 @@ getCurAttackDmg = function(){
 	characterData.curXP += value;
  }
  
+ function loseExperience(value){
+	characterData.curXP -= value;
+	if(characterData.curXP < 0){characterData.curXP = 0;}
+ }
+ 
  function gainShields(value){
 	var _cur = characterData.curShields;
 	var _max = characterData.maxShields;
@@ -117,6 +125,15 @@ getCurAttackDmg = function(){
  
  function gainGold(value){
 	characterData.gold += value;
+ }
+  function spendGold(value){
+	var _cur = characterData.gold;
+	if(_cur - value < 0){
+		return false;
+	} else {
+		characterData.gold -= value;
+		return true;
+	}
  }
  
  function increaseDamage(value){

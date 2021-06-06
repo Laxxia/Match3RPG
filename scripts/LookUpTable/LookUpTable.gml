@@ -1,23 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.lookUpTable = {
-	IronSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 
+		Stick: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Sturdy Branch", "You found this on the ground", 
 	function(level){
 		switch(level){
 			case 1:
-				oCharacterData.increaseDamage(5);
+				oCharacterData.increaseDamage(3);
 				break;
 			case 2:
-				oCharacterData.increaseDamage(10);
+				oCharacterData.increaseDamage(6);
 				break;
 			case 3:
-				oCharacterData.increaseDamage(15);
+				oCharacterData.increaseDamage(9);
 				break;
 			case 4:
-				oCharacterData.increaseDamage(20);
+				oCharacterData.increaseDamage(12);
 				break;
 			case 5:
-				oCharacterData.increaseDamage(25)
+				oCharacterData.increaseDamage(15)
 				break;
 		}
 			
@@ -25,24 +25,67 @@ global.lookUpTable = {
 	function(level){
 		switch(level){
 			case 1:
-				oCharacterData.decreaseDamage(5);
+				oCharacterData.decreaseDamage(3);
 				break;
 			case 2:
-				oCharacterData.decreaseDamage(10);
+				oCharacterData.decreaseDamage(6);
 				break;
 			case 3:
-				oCharacterData.decreaseDamage(15);
+				oCharacterData.decreaseDamage(9);
 				break;
 			case 4:
-				oCharacterData.decreaseDamage(20);
+				oCharacterData.decreaseDamage(12);
 				break;
 			case 5:
-				oCharacterData.decreaseDamage(25);
+				oCharacterData.decreaseDamage(15);
 				break;
 		}
 					isEquipped = false;
 	},
-	5, 3,setType.iron, sprSword),
+	5,-1, sprTwigWeapon),
+	
+	IronSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 
+	function(level){
+		switch(level){
+			case 1:
+				oCharacterData.increaseDamage(10);
+				break;
+			case 2:
+				oCharacterData.increaseDamage(20);
+				break;
+			case 3:
+				oCharacterData.increaseDamage(30);
+				break;
+			case 4:
+				oCharacterData.increaseDamage(40);
+				break;
+			case 5:
+				oCharacterData.increaseDamage(50);
+				break;
+		}
+			
+	},
+	function(level){
+		switch(level){
+			case 1:
+				oCharacterData.decreaseDamage(10);
+				break;
+			case 2:
+				oCharacterData.decreaseDamage(20);
+				break;
+			case 3:
+				oCharacterData.decreaseDamage(30);
+				break;
+			case 4:
+				oCharacterData.decreaseDamage(40);
+				break;
+			case 5:
+				oCharacterData.decreaseDamage(50);
+				break;
+		}
+					isEquipped = false;
+	},
+	5,setType.iron, sprSword),
 		
 	CopperSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Copper Sword", "It's an Iron Sword", 
 	function(level){
@@ -68,7 +111,7 @@ global.lookUpTable = {
 			break;
 		}
 	},
-	5, 3,setType.iron, sprCSword),
+	5,setType.iron, sprCSword),
 		
 	IronHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Iron Helm", "It's an Iron Helm", 
 	//TODO - remember to make sure to change this into a setter at some point
@@ -94,7 +137,7 @@ global.lookUpTable = {
 			break;
 		}
 	},
-	5, 3,setType.iron, sprHelm),
+	5,setType.iron, sprHelm),
 		
 	CopperHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Copper Helm", "It's a Copper Helm", 
 	function(level){
@@ -119,7 +162,7 @@ global.lookUpTable = {
 			break;
 		}
 	},
-	5, 3,setType.iron, sprCHelm),
+	5,setType.iron, sprCHelm),
 
 	FireAmulet: new Equipment(itemCat.equipment, equipmentTypes.amulet, "Fire Amulet", "Let's you cast Fireball", 
 	function(){
@@ -127,16 +170,14 @@ global.lookUpTable = {
 		},
 	function(){//This is probably just the hotKeyRemove function
 		//oCharacterData.characterData.maxShields -= 5;
-		},
-	5, 3,setType.iron, sprAmulet),
+		},3,setType.iron, sprAmulet),
 	LuckyAmulet: new Equipment(itemCat.equipment, equipmentTypes.amulet, "Lucky Amulet", "Gives you Lucky attack cast", 
 	function(){
 		hotkeySpell("LuckyAttack");		
 		},
 	function(){//This is probably just the hotKeyRemove function
 		//oCharacterData.characterData.maxShields -= 5;
-		},
-	5, 3,setType.iron, sprAmulet),
+		}, 3,setType.iron, sprAmulet),
 
 	HealthPotion: new  Consumable(itemCat.consumable, "Health Potion", "This is a health potion",
 	function(){return oCharacterData.heal(5);},
@@ -153,15 +194,14 @@ global.lookUpTable = {
 }
 
 #region ///Constructors
-function Equipment (itemType,equipmentType,itemName,description,onEquip,onDequip,cost,maxLevel,set, sprite) constructor{
+function Equipment (itemType,equipmentType,itemName,description,onEquip,onDequip,cost,set, sprite) constructor{
   self.itemType = itemType
   self.equipmentType = equipmentType
   self.itemName =  itemName
-  self.description = description  
+  self.description = description
   self.onEquip = onEquip
   self.onDequip = onDequip
   self.cost = cost
-  self.maxLevel = maxLevel
   self.set = set
   self.sprite = sprite //probably group them, so all swords are one sprite, and then have the sprite_index be the specific sword
 }
@@ -247,7 +287,8 @@ enum equipmentTypes{
 	legs,
 	weapon,
 	shield,
-	amulet
+	amulet,
+	none
 }
 
 enum itemCat{

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Item Sprites",
-    "path": "folders/Sprites/Item Sprites.yy",
+    "name": "Helmets",
+    "path": "folders/Sprites/Item Sprites/Helmets.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprHelm",

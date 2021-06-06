@@ -15,19 +15,13 @@ function scrGemDeclare(ins){
 			ins.gemType = jewelType.shields;
 		break;
 		case 3:
-			ins.gemType = jewelType.bad;
+			ins.gemType = jewelType.mana;
 		break;
 		case 4:
 			ins.gemType = jewelType.gold;
 		break;
 		case 5:
 			ins.gemType = jewelType.charge;
-		break;
-		case 6:
-			ins.gemType = jewelType.mana;
-		break;
-		case 7:
-			ins.gemType = jewelType.mana;
 		break;
 	}
 }
