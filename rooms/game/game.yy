@@ -39,18 +39,9 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oUICellGearInv","path":"objects/oUICellGearInv/oUICellGearInv.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":960.0,"resourceVersion":"1.0","name":"inst_553FD7C9","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oUICellGearInv","path":"objects/oUICellGearInv/oUICellGearInv.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":960.0,"resourceVersion":"1.0","name":"inst_77346373","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
-            {"propertyId":{"name":"designatedEquip","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.shield","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-            {"propertyId":{"name":"image_index","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.shield","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":608.0,"resourceVersion":"1.0","name":"inst_30FDDC58","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
             {"propertyId":{"name":"designatedEquip","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.weapon","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"image_index","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.weapon","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":736.0,"resourceVersion":"1.0","name":"inst_8DDD4F","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"designatedEquip","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.weapon","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-            {"propertyId":{"name":"image_index","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"0","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-            {"propertyId":{"name":"image_index","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.weapon","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":352.0,"y":608.0,"resourceVersion":"1.0","name":"inst_D61E2E5","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"designatedEquip","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.chest","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"image_index","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"objectId":{"name":"oUICellEquipGear","path":"objects/oUICellEquipGear/oUICellEquipGear.yy",},"value":"equipmentTypes.chest","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
@@ -145,9 +136,7 @@
     {"name":"inst_3BD107D1","path":"rooms/game/game.yy",},
     {"name":"inst_553FD7C9","path":"rooms/game/game.yy",},
     {"name":"inst_77346373","path":"rooms/game/game.yy",},
-    {"name":"inst_30FDDC58","path":"rooms/game/game.yy",},
     {"name":"inst_8DDD4F","path":"rooms/game/game.yy",},
-    {"name":"inst_D61E2E5","path":"rooms/game/game.yy",},
     {"name":"inst_2C1A8F3C","path":"rooms/game/game.yy",},
     {"name":"inst_77343CDA","path":"rooms/game/game.yy",},
     {"name":"inst_6967D0E8","path":"rooms/game/game.yy",},

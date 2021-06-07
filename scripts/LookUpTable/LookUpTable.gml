@@ -30,8 +30,7 @@ global.lookUpTable = {
 			case 2:
 				oCharacterData.decreaseDamage(6);
 				break;
-			case 3:
-				oCharacterData.decreaseDamage(9);
+			case 3: 
 				break;
 			case 4:
 				oCharacterData.decreaseDamage(12);
@@ -118,22 +117,38 @@ global.lookUpTable = {
 	function(level){
 		switch(level){
 			case 1:
+			oCharacterData.increaseMaxHP(5);
+			break;
 			case 2:
+			oCharacterData.increaseMaxHP(10);
+			break;
 			case 3:
+			oCharacterData.increaseMaxHP(15);
+			break;
 			case 4:
+			oCharacterData.increaseMaxHP(20);
+			break;
 			case 5:
-			oCharacterData.characterData.maxShields += 5;
+			oCharacterData.increaseMaxHP(25);
 			break;
 		}
 	},
 	function(level){
 		switch(level){
 			case 1:
+			oCharacterData.decreaseMaxHP(5);
+			break;
 			case 2:
+			oCharacterData.decreaseMaxHP(10);
+			break;
 			case 3:
+			oCharacterData.decreaseMaxHP(15);
+			break;
 			case 4:
+			oCharacterData.decreaseMaxHP(20);
+			break;
 			case 5:
-			oCharacterData.characterData.maxShields -= 5;
+			oCharacterData.decreaseMaxHP(25);
 			break;
 		}
 	},
@@ -143,22 +158,38 @@ global.lookUpTable = {
 	function(level){
 		switch(level){
 			case 1:
+			oCharacterData.increaseMaxHP(5);
+			break;
 			case 2:
+			oCharacterData.increaseMaxHP(10);
+			break;
 			case 3:
+			oCharacterData.increaseMaxHP(15);
+			break;
 			case 4:
+			oCharacterData.increaseMaxHP(20);
+			break;
 			case 5:
-			oCharacterData.characterData.maxShields += 5;
+			oCharacterData.increaseMaxHP(25);
 			break;
 		}
 	},
 	function(level){
 		switch(level){
 			case 1:
+			oCharacterData.decreaseMaxHP(5);
+			break;
 			case 2:
+			oCharacterData.decreaseMaxHP(10);
+			break;
 			case 3:
+			oCharacterData.decreaseMaxHP(15);
+			break;
 			case 4:
+			oCharacterData.decreaseMaxHP(20);
+			break;
 			case 5:
-			oCharacterData.characterData.maxShields -= 5;
+			oCharacterData.decreaseMaxHP(25);
 			break;
 		}
 	},

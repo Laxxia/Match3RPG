@@ -10,6 +10,7 @@ groupItemOnType(itemPool, itemCat.equipment);
 ds_list_shuffle(itemPool);
 
 itemsSelected = [];
+consumables = [];
 
 
 var rand = -1;
@@ -18,6 +19,7 @@ for (var i = 0; i < itemCount; i++){
 	itemsSelected[i] = ds_list_find_value(itemPool, rand);
 	ds_list_delete(itemPool, rand);
 }
+itemsSelected[array_length(itemsSelected)] = getItemData("HealthPotion");
 
 closeWindow = function(){
 	oItemShop.leaveShop();

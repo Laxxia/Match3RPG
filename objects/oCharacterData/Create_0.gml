@@ -7,10 +7,10 @@ function characterInstantiate(){
 		curHP : 10,
 		maxMana : 100,
 		curMana : 0,
-		gold : 0,
+		gold : 10,
 		chargeCount : 0,
 		target : noone,
-		maxShields : 10,
+		maxShields : 3,
 		curShields : 0,
 		curXP : 0,
 		curLuck : 0,
@@ -154,6 +154,32 @@ getCurAttackDmg = function(){
  
  function setTarget(value){
 	characterData.target = value;
+ }
+ 
+ function increaseMaxShields(value){
+	characterData.maxShields += value; 
+ }
+ 
+  function increaseMaxHP(value){
+	characterData.maxHP += value; 
+ }
+ 
+ function decreaseMaxShields(value){
+	var _cur = characterData.maxShields;
+	if(_cur - value < 0){
+		characterData.maxShields = 0;
+	} else {
+		characterData.maxShields -= value;
+	}
+ }
+ 
+function decreaseMaxHP(value){
+	var _cur = characterData.maxHP;
+	if(_cur - value < 0){
+		characterData.maxHP = 0;
+	} else {
+		characterData.maxHP -= value;
+	}
  }
  
  function heal(healingValue){
