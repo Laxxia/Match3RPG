@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+#macro contItem containedItem.lookUp
 width = sprite_width;
 height = sprite_height;
 isHovered = false;

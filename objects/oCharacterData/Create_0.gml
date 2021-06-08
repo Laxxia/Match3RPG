@@ -74,12 +74,12 @@ getCurAttackDmg = function(){
 
 #region //Setters
  function equip(item){
-	item.lookUp.onEquip(item.level);
+	item.lookUp.onEquip(item.lookUp, item.level);
 	item.isEquipped = true;
  }
  
  function unequip(item){
-	item.lookUp.onDequip(item.level);   
+	item.lookUp.onDequip(item.lookUp, item.level);   
 	item.isEquipped = false;
  }
  

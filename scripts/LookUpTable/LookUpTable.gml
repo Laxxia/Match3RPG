@@ -1,115 +1,32 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.lookUpTable = {
-		Stick: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Sturdy Branch", "You found this on the ground", 
-	function(level){
-		switch(level){
-			case 1:
-				oCharacterData.increaseDamage(3);
-				break;
-			case 2:
-				oCharacterData.increaseDamage(6);
-				break;
-			case 3:
-				oCharacterData.increaseDamage(9);
-				break;
-			case 4:
-				oCharacterData.increaseDamage(12);
-				break;
-			case 5:
-				oCharacterData.increaseDamage(15)
-				break;
-		}
-			
-	},
-	function(level){
-		switch(level){
-			case 1:
-				oCharacterData.decreaseDamage(3);
-				break;
-			case 2:
-				oCharacterData.decreaseDamage(6);
-				break;
-			case 3: 
-				break;
-			case 4:
-				oCharacterData.decreaseDamage(12);
-				break;
-			case 5:
-				oCharacterData.decreaseDamage(15);
-				break;
-		}
-					isEquipped = false;
-	},
+		
+	Stick: new Weapon(itemCat.equipment, equipmentTypes.weapon, "Sturdy Branch", "You found this on the ground", 3,
+		function(_self, level){
+			oCharacterData.increaseDamage(_self.damage * level);
+		},
+		function(_self, level){
+			oCharacterData.decreaseDamage(_self.damage * level);
+		},
 	5,-1, sprTwigWeapon),
 	
-	IronSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 
-	function(level){
-		switch(level){
-			case 1:
-				oCharacterData.increaseDamage(10);
-				break;
-			case 2:
-				oCharacterData.increaseDamage(20);
-				break;
-			case 3:
-				oCharacterData.increaseDamage(30);
-				break;
-			case 4:
-				oCharacterData.increaseDamage(40);
-				break;
-			case 5:
-				oCharacterData.increaseDamage(50);
-				break;
-		}
-			
-	},
-	function(level){
-		switch(level){
-			case 1:
-				oCharacterData.decreaseDamage(10);
-				break;
-			case 2:
-				oCharacterData.decreaseDamage(20);
-				break;
-			case 3:
-				oCharacterData.decreaseDamage(30);
-				break;
-			case 4:
-				oCharacterData.decreaseDamage(40);
-				break;
-			case 5:
-				oCharacterData.decreaseDamage(50);
-				break;
-		}
-					isEquipped = false;
-	},
+	IronSword: new Weapon(itemCat.equipment, equipmentTypes.weapon, "Iron Sword", "It's an Iron Sword", 10, 
+		function(_self, level){
+			oCharacterData.increaseDamage(_self.damage * level);
+		},
+		function(_self, level){
+			oCharacterData.decreaseDamage(_self.damage * level);
+		},
 	5,setType.iron, sprSword),
 		
-	CopperSword: new Equipment(itemCat.equipment, equipmentTypes.weapon, "Copper Sword", "It's an Iron Sword", 
-	function(level){
-		switch(level){
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			oCharacterData.characterData.maxShields += 5;
-			break;
-		}
-
-	},
-	function(level){
-		switch(level){
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			oCharacterData.characterData.maxShields -= 5;
-			break;
-		}
-	},
+	CopperSword: new Weapon(itemCat.equipment, equipmentTypes.weapon, "Copper Sword", "It's an Iron Sword", 20, 
+		function(_self, level){
+			oCharacterData.increaseDamage(_self.damage * level);
+		},
+		function(_self, level){
+			oCharacterData.decreaseDamage(_self.damage * level);
+		},
 	5,setType.iron, sprCSword),
 		
 	IronHelm: new Equipment(itemCat.equipment, equipmentTypes.head, "Iron Helm", "It's an Iron Helm", 
@@ -237,6 +154,19 @@ function Equipment (itemType,equipmentType,itemName,description,onEquip,onDequip
   self.sprite = sprite //probably group them, so all swords are one sprite, and then have the sprite_index be the specific sword
 }
 
+function Weapon (itemType,equipmentType,itemName,description, damage, onEquip,onDequip,cost,set, sprite) constructor{
+  self.itemType = itemType
+  self.equipmentType = equipmentType
+  self.itemName =  itemName
+  self.description = description
+  self.damage = damage
+  self.onEquip = onEquip
+  self.onDequip = onDequip
+  self.cost = cost
+  self.set = set
+  self.sprite = sprite //probably group them, so all swords are one sprite, and then have the sprite_index be the specific sword
+}
+
 function equipableGear (gearPiece) constructor {
 	lookUp = gearPiece;
 	lvlUpCost = [400, 600, 1000, 1200];
@@ -249,9 +179,9 @@ function equipableGear (gearPiece) constructor {
         }
         show_debug_message("isEquipped: " + string(isEquipped) + string(self));
         if(isEquipped){
-            lookUp.onDequip(level);
+            lookUp.onDequip(self.lookUp, level);
             level ++;
-            lookUp.onEquip(level);
+            lookUp.onEquip(self.lookUp, level);
         } else {
             show_debug_message("is not equipped");
             level ++;
